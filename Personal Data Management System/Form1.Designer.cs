@@ -46,13 +46,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.textBoxSurName = new System.Windows.Forms.TextBox();
+            this.textBoxGivenName = new System.Windows.Forms.TextBox();
+            this.textBoxHeight = new System.Windows.Forms.TextBox();
+            this.textBoxMatriculationNo = new System.Windows.Forms.TextBox();
+            this.textBoxEmployeeNo = new System.Windows.Forms.TextBox();
+            this.comboBoxGender = new System.Windows.Forms.ComboBox();
+            this.comboBoxEyeColor = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -65,6 +65,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "<";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button7
             // 
@@ -93,6 +94,7 @@
             this.button9.TabIndex = 8;
             this.button9.Text = "save binary";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -102,6 +104,7 @@
             this.button10.TabIndex = 9;
             this.button10.Text = ">";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -220,56 +223,63 @@
             this.label10.TabIndex = 27;
             this.label10.Text = "Salary:";
             // 
-            // textBox1
+            // textBoxSurName
             // 
-            this.textBox1.Location = new System.Drawing.Point(125, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 22);
-            this.textBox1.TabIndex = 28;
+            this.textBoxSurName.Location = new System.Drawing.Point(125, 64);
+            this.textBoxSurName.Name = "textBoxSurName";
+            this.textBoxSurName.Size = new System.Drawing.Size(196, 22);
+            this.textBoxSurName.TabIndex = 28;
+            this.textBoxSurName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // textBoxGivenName
             // 
-            this.textBox2.Location = new System.Drawing.Point(125, 92);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 22);
-            this.textBox2.TabIndex = 29;
+            this.textBoxGivenName.Location = new System.Drawing.Point(125, 92);
+            this.textBoxGivenName.Name = "textBoxGivenName";
+            this.textBoxGivenName.Size = new System.Drawing.Size(196, 22);
+            this.textBoxGivenName.TabIndex = 29;
+            this.textBoxGivenName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox3
+            // textBoxHeight
             // 
-            this.textBox3.Location = new System.Drawing.Point(125, 120);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(196, 22);
-            this.textBox3.TabIndex = 30;
+            this.textBoxHeight.Location = new System.Drawing.Point(125, 120);
+            this.textBoxHeight.Name = "textBoxHeight";
+            this.textBoxHeight.Size = new System.Drawing.Size(196, 22);
+            this.textBoxHeight.TabIndex = 30;
+            this.textBoxHeight.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox4
+            // textBoxMatriculationNo
             // 
-            this.textBox4.Location = new System.Drawing.Point(192, 208);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(129, 22);
-            this.textBox4.TabIndex = 31;
+            this.textBoxMatriculationNo.Location = new System.Drawing.Point(192, 208);
+            this.textBoxMatriculationNo.Name = "textBoxMatriculationNo";
+            this.textBoxMatriculationNo.Size = new System.Drawing.Size(129, 22);
+            this.textBoxMatriculationNo.TabIndex = 31;
+            this.textBoxMatriculationNo.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // textBox5
+            // textBoxEmployeeNo
             // 
-            this.textBox5.Location = new System.Drawing.Point(192, 259);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(129, 22);
-            this.textBox5.TabIndex = 32;
+            this.textBoxEmployeeNo.Location = new System.Drawing.Point(192, 259);
+            this.textBoxEmployeeNo.Name = "textBoxEmployeeNo";
+            this.textBoxEmployeeNo.Size = new System.Drawing.Size(129, 22);
+            this.textBoxEmployeeNo.TabIndex = 32;
+            this.textBoxEmployeeNo.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-            // comboBox1
+            // comboBoxGender
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(125, 148);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(196, 24);
-            this.comboBox1.TabIndex = 33;
+            this.comboBoxGender.FormattingEnabled = true;
+            this.comboBoxGender.Location = new System.Drawing.Point(125, 148);
+            this.comboBoxGender.Name = "comboBoxGender";
+            this.comboBoxGender.Size = new System.Drawing.Size(196, 24);
+            this.comboBoxGender.TabIndex = 33;
+            this.comboBoxGender.SelectedIndexChanged += new System.EventHandler(this.comboBoxGender_SelectedIndexChanged);
             // 
-            // comboBox2
+            // comboBoxEyeColor
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(125, 178);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(196, 24);
-            this.comboBox2.TabIndex = 34;
+            this.comboBoxEyeColor.FormattingEnabled = true;
+            this.comboBoxEyeColor.Location = new System.Drawing.Point(125, 178);
+            this.comboBoxEyeColor.Name = "comboBoxEyeColor";
+            this.comboBoxEyeColor.Size = new System.Drawing.Size(196, 24);
+            this.comboBoxEyeColor.TabIndex = 34;
+            this.comboBoxEyeColor.SelectedIndexChanged += new System.EventHandler(this.comboBoxEyeColor_SelectedIndexChanged);
             // 
             // label12
             // 
@@ -296,13 +306,13 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.comboBoxEyeColor);
+            this.Controls.Add(this.comboBoxGender);
+            this.Controls.Add(this.textBoxEmployeeNo);
+            this.Controls.Add(this.textBoxMatriculationNo);
+            this.Controls.Add(this.textBoxHeight);
+            this.Controls.Add(this.textBoxGivenName);
+            this.Controls.Add(this.textBoxSurName);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -349,13 +359,13 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox textBoxSurName;
+        private System.Windows.Forms.TextBox textBoxGivenName;
+        private System.Windows.Forms.TextBox textBoxHeight;
+        private System.Windows.Forms.TextBox textBoxMatriculationNo;
+        private System.Windows.Forms.TextBox textBoxEmployeeNo;
+        private System.Windows.Forms.ComboBox comboBoxGender;
+        private System.Windows.Forms.ComboBox comboBoxEyeColor;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
     }

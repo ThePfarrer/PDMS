@@ -11,8 +11,16 @@ namespace Personal_Data_Management_System
         double matriculationNumber;
         readonly double creditPoints;
 
-        public Student(string surname, string givenName, double height, genderType gender, eyeColorType eyeColor) : base(surname, givenName, height, gender, eyeColor)
+        public double MatriculationNumber { get => matriculationNumber; set => matriculationNumber = value; }
+
+        public double CreditPoints => creditPoints;
+
+        public Student(string surname, string givenName, double height, genderType gender, 
+            eyeColorType eyeColor, double matriculationNumber, double creditPoints) : 
+            base(surname, givenName, height, gender, eyeColor)
         {
+            this.creditPoints = creditPoints;
+            this.matriculationNumber = matriculationNumber;
         }
     }
 }
