@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Personal_Data_Management_System
 {
-    class Person
+    [Serializable]
+    public class Person
     {
-        string surname;
-        string givenName;
-        double height;
+        protected string surname;
+        protected string givenName;
+        protected double height;
         genderType gender;
         eyeColorType eyeColor;
 

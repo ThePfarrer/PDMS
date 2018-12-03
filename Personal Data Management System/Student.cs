@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Personal_Data_Management_System
 {
+    [Serializable]
     class Student : Person
     {
         double matriculationNumber;
