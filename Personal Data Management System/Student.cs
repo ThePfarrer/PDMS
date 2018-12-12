@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Personal_Data_Management_System
 {
     [Serializable]
-    class Student : Person
+    public class Student : Person
     {
         double matriculationNumber;
         readonly double creditPoints;
@@ -15,6 +15,11 @@ namespace Personal_Data_Management_System
         public double MatriculationNumber { get => matriculationNumber; set => matriculationNumber = value; }
 
         public double CreditPoints => creditPoints;
+
+        public Student()
+        {
+
+        }
 
         public Student(string surname, string givenName, double height, genderType gender, 
             eyeColorType eyeColor, double matriculationNumber, double creditPoints) : 

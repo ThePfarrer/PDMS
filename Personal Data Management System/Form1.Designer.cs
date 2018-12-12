@@ -55,13 +55,30 @@
             this.comboBoxEyeColor = new System.Windows.Forms.ComboBox();
             this.CPOutputLabel = new System.Windows.Forms.Label();
             this.salaryOutputLabel = new System.Windows.Forms.Label();
+            this.sortSurnameButton = new System.Windows.Forms.Button();
+            this.sortGivenNameButton = new System.Windows.Forms.Button();
+            this.filterButton = new System.Windows.Forms.Button();
+            this.filterTextbox = new System.Windows.Forms.TextBox();
+            this.statisticsLabel = new System.Windows.Forms.Label();
+            this.maleLabel = new System.Windows.Forms.Label();
+            this.tallestLabel = new System.Windows.Forms.Label();
+            this.browneyedLabel = new System.Windows.Forms.Label();
+            this.femaleLabel = new System.Windows.Forms.Label();
+            this.averageLabel = new System.Windows.Forms.Label();
+            this.maleLabelOutput = new System.Windows.Forms.Label();
+            this.averageOutputLabel = new System.Windows.Forms.Label();
+            this.tallestOutputLabel = new System.Windows.Forms.Label();
+            this.brownEyedOutputLabel = new System.Windows.Forms.Label();
+            this.femaleOutputLabel = new System.Windows.Forms.Label();
+            this.shortestLabel = new System.Windows.Forms.Label();
+            this.shortestOutputLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // previousButton
             // 
-            this.previousButton.Location = new System.Drawing.Point(355, 36);
+            this.previousButton.Location = new System.Drawing.Point(362, 36);
             this.previousButton.Name = "previousButton";
-            this.previousButton.Size = new System.Drawing.Size(41, 23);
+            this.previousButton.Size = new System.Drawing.Size(30, 30);
             this.previousButton.TabIndex = 0;
             this.previousButton.Text = "<";
             this.previousButton.UseVisualStyleBackColor = true;
@@ -75,6 +92,7 @@
             this.promoteToEmployee.TabIndex = 6;
             this.promoteToEmployee.Text = "Promote to Employee";
             this.promoteToEmployee.UseVisualStyleBackColor = true;
+            this.promoteToEmployee.Click += new System.EventHandler(this.promoteToEmployee_Click);
             // 
             // promoteToStudent
             // 
@@ -84,6 +102,7 @@
             this.promoteToStudent.TabIndex = 7;
             this.promoteToStudent.Text = "Promote to Student";
             this.promoteToStudent.UseVisualStyleBackColor = true;
+            this.promoteToStudent.Click += new System.EventHandler(this.promoteToStudent_Click);
             // 
             // saveBinButton
             // 
@@ -97,9 +116,9 @@
             // 
             // nextButton
             // 
-            this.nextButton.Location = new System.Drawing.Point(411, 36);
+            this.nextButton.Location = new System.Drawing.Point(402, 36);
             this.nextButton.Name = "nextButton";
-            this.nextButton.Size = new System.Drawing.Size(41, 23);
+            this.nextButton.Size = new System.Drawing.Size(30, 30);
             this.nextButton.TabIndex = 9;
             this.nextButton.Text = ">";
             this.nextButton.UseVisualStyleBackColor = true;
@@ -113,6 +132,7 @@
             this.saveXMLButton.TabIndex = 10;
             this.saveXMLButton.Text = "save XML";
             this.saveXMLButton.UseVisualStyleBackColor = true;
+            this.saveXMLButton.Click += new System.EventHandler(this.saveXMLButton_Click);
             // 
             // loadXMLButton
             // 
@@ -122,6 +142,7 @@
             this.loadXMLButton.TabIndex = 11;
             this.loadXMLButton.Text = "load XML";
             this.loadXMLButton.UseVisualStyleBackColor = true;
+            this.loadXMLButton.Click += new System.EventHandler(this.loadXMLButton_Click);
             // 
             // loadBinButton
             // 
@@ -230,7 +251,6 @@
             this.textBoxSurName.Size = new System.Drawing.Size(196, 22);
             this.textBoxSurName.TabIndex = 28;
             this.textBoxSurName.TextChanged += new System.EventHandler(this.textBoxSurName_TextChanged);
-            
             // 
             // textBoxGivenName
             // 
@@ -300,11 +320,184 @@
             this.salaryOutputLabel.TabIndex = 37;
             this.salaryOutputLabel.Text = "0";
             // 
+            // sortSurnameButton
+            // 
+            this.sortSurnameButton.Location = new System.Drawing.Point(500, 208);
+            this.sortSurnameButton.Name = "sortSurnameButton";
+            this.sortSurnameButton.Size = new System.Drawing.Size(288, 33);
+            this.sortSurnameButton.TabIndex = 38;
+            this.sortSurnameButton.Text = "Sort by Surname";
+            this.sortSurnameButton.UseVisualStyleBackColor = true;
+            this.sortSurnameButton.Click += new System.EventHandler(this.sortSurnameButton_Click);
+            // 
+            // sortGivenNameButton
+            // 
+            this.sortGivenNameButton.Location = new System.Drawing.Point(500, 249);
+            this.sortGivenNameButton.Name = "sortGivenNameButton";
+            this.sortGivenNameButton.Size = new System.Drawing.Size(288, 33);
+            this.sortGivenNameButton.TabIndex = 39;
+            this.sortGivenNameButton.Text = "Sort by Given Name";
+            this.sortGivenNameButton.UseVisualStyleBackColor = true;
+            this.sortGivenNameButton.Click += new System.EventHandler(this.sortGivenNameButton_Click);
+            // 
+            // filterButton
+            // 
+            this.filterButton.Location = new System.Drawing.Point(500, 297);
+            this.filterButton.Name = "filterButton";
+            this.filterButton.Size = new System.Drawing.Size(141, 32);
+            this.filterButton.TabIndex = 40;
+            this.filterButton.Text = "Filter";
+            this.filterButton.UseVisualStyleBackColor = true;
+            this.filterButton.Click += new System.EventHandler(this.filterButton_Click);
+            // 
+            // filterTextbox
+            // 
+            this.filterTextbox.Location = new System.Drawing.Point(500, 349);
+            this.filterTextbox.Multiline = true;
+            this.filterTextbox.Name = "filterTextbox";
+            this.filterTextbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.filterTextbox.Size = new System.Drawing.Size(141, 154);
+            this.filterTextbox.TabIndex = 41;
+            // 
+            // statisticsLabel
+            // 
+            this.statisticsLabel.AutoSize = true;
+            this.statisticsLabel.Location = new System.Drawing.Point(21, 349);
+            this.statisticsLabel.Name = "statisticsLabel";
+            this.statisticsLabel.Size = new System.Drawing.Size(64, 17);
+            this.statisticsLabel.TabIndex = 42;
+            this.statisticsLabel.Text = "Statistics";
+            // 
+            // maleLabel
+            // 
+            this.maleLabel.AutoSize = true;
+            this.maleLabel.Location = new System.Drawing.Point(83, 386);
+            this.maleLabel.Name = "maleLabel";
+            this.maleLabel.Size = new System.Drawing.Size(42, 17);
+            this.maleLabel.TabIndex = 43;
+            this.maleLabel.Text = "male:";
+            // 
+            // tallestLabel
+            // 
+            this.tallestLabel.AutoSize = true;
+            this.tallestLabel.Location = new System.Drawing.Point(71, 446);
+            this.tallestLabel.Name = "tallestLabel";
+            this.tallestLabel.Size = new System.Drawing.Size(54, 17);
+            this.tallestLabel.TabIndex = 44;
+            this.tallestLabel.Text = "Tallest:";
+            // 
+            // browneyedLabel
+            // 
+            this.browneyedLabel.AutoSize = true;
+            this.browneyedLabel.Location = new System.Drawing.Point(40, 426);
+            this.browneyedLabel.Name = "browneyedLabel";
+            this.browneyedLabel.Size = new System.Drawing.Size(85, 17);
+            this.browneyedLabel.TabIndex = 45;
+            this.browneyedLabel.Text = "brown eyed:";
+            // 
+            // femaleLabel
+            // 
+            this.femaleLabel.AutoSize = true;
+            this.femaleLabel.Location = new System.Drawing.Point(71, 406);
+            this.femaleLabel.Name = "femaleLabel";
+            this.femaleLabel.Size = new System.Drawing.Size(54, 17);
+            this.femaleLabel.TabIndex = 46;
+            this.femaleLabel.Text = "female:";
+            // 
+            // averageLabel
+            // 
+            this.averageLabel.AutoSize = true;
+            this.averageLabel.Location = new System.Drawing.Point(24, 486);
+            this.averageLabel.Name = "averageLabel";
+            this.averageLabel.Size = new System.Drawing.Size(110, 17);
+            this.averageLabel.TabIndex = 47;
+            this.averageLabel.Text = "Average Height:";
+            // 
+            // maleLabelOutput
+            // 
+            this.maleLabelOutput.AutoSize = true;
+            this.maleLabelOutput.Location = new System.Drawing.Point(149, 386);
+            this.maleLabelOutput.Name = "maleLabelOutput";
+            this.maleLabelOutput.Size = new System.Drawing.Size(16, 17);
+            this.maleLabelOutput.TabIndex = 48;
+            this.maleLabelOutput.Text = "0";
+            // 
+            // averageOutputLabel
+            // 
+            this.averageOutputLabel.AutoSize = true;
+            this.averageOutputLabel.Location = new System.Drawing.Point(149, 486);
+            this.averageOutputLabel.Name = "averageOutputLabel";
+            this.averageOutputLabel.Size = new System.Drawing.Size(16, 17);
+            this.averageOutputLabel.TabIndex = 49;
+            this.averageOutputLabel.Text = "0";
+            // 
+            // tallestOutputLabel
+            // 
+            this.tallestOutputLabel.AutoSize = true;
+            this.tallestOutputLabel.Location = new System.Drawing.Point(149, 446);
+            this.tallestOutputLabel.Name = "tallestOutputLabel";
+            this.tallestOutputLabel.Size = new System.Drawing.Size(16, 17);
+            this.tallestOutputLabel.TabIndex = 50;
+            this.tallestOutputLabel.Text = "0";
+            // 
+            // brownEyedOutputLabel
+            // 
+            this.brownEyedOutputLabel.AutoSize = true;
+            this.brownEyedOutputLabel.Location = new System.Drawing.Point(149, 426);
+            this.brownEyedOutputLabel.Name = "brownEyedOutputLabel";
+            this.brownEyedOutputLabel.Size = new System.Drawing.Size(16, 17);
+            this.brownEyedOutputLabel.TabIndex = 51;
+            this.brownEyedOutputLabel.Text = "0";
+            // 
+            // femaleOutputLabel
+            // 
+            this.femaleOutputLabel.AutoSize = true;
+            this.femaleOutputLabel.Location = new System.Drawing.Point(149, 406);
+            this.femaleOutputLabel.Name = "femaleOutputLabel";
+            this.femaleOutputLabel.Size = new System.Drawing.Size(16, 17);
+            this.femaleOutputLabel.TabIndex = 52;
+            this.femaleOutputLabel.Text = "0";
+            // 
+            // shortestLabel
+            // 
+            this.shortestLabel.AutoSize = true;
+            this.shortestLabel.Location = new System.Drawing.Point(64, 466);
+            this.shortestLabel.Name = "shortestLabel";
+            this.shortestLabel.Size = new System.Drawing.Size(65, 17);
+            this.shortestLabel.TabIndex = 53;
+            this.shortestLabel.Text = "Shortest:";
+            // 
+            // shortestOutputLabel
+            // 
+            this.shortestOutputLabel.AutoSize = true;
+            this.shortestOutputLabel.Location = new System.Drawing.Point(149, 463);
+            this.shortestOutputLabel.Name = "shortestOutputLabel";
+            this.shortestOutputLabel.Size = new System.Drawing.Size(16, 17);
+            this.shortestOutputLabel.TabIndex = 54;
+            this.shortestOutputLabel.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(831, 537);
+            this.Controls.Add(this.shortestOutputLabel);
+            this.Controls.Add(this.shortestLabel);
+            this.Controls.Add(this.femaleOutputLabel);
+            this.Controls.Add(this.brownEyedOutputLabel);
+            this.Controls.Add(this.tallestOutputLabel);
+            this.Controls.Add(this.averageOutputLabel);
+            this.Controls.Add(this.maleLabelOutput);
+            this.Controls.Add(this.averageLabel);
+            this.Controls.Add(this.femaleLabel);
+            this.Controls.Add(this.browneyedLabel);
+            this.Controls.Add(this.tallestLabel);
+            this.Controls.Add(this.maleLabel);
+            this.Controls.Add(this.statisticsLabel);
+            this.Controls.Add(this.filterTextbox);
+            this.Controls.Add(this.filterButton);
+            this.Controls.Add(this.sortGivenNameButton);
+            this.Controls.Add(this.sortSurnameButton);
             this.Controls.Add(this.salaryOutputLabel);
             this.Controls.Add(this.CPOutputLabel);
             this.Controls.Add(this.comboBoxEyeColor);
@@ -369,6 +562,23 @@
         private System.Windows.Forms.ComboBox comboBoxEyeColor;
         private System.Windows.Forms.Label CPOutputLabel;
         private System.Windows.Forms.Label salaryOutputLabel;
+        private System.Windows.Forms.Button sortSurnameButton;
+        private System.Windows.Forms.Button sortGivenNameButton;
+        private System.Windows.Forms.Button filterButton;
+        private System.Windows.Forms.TextBox filterTextbox;
+        private System.Windows.Forms.Label statisticsLabel;
+        private System.Windows.Forms.Label maleLabel;
+        private System.Windows.Forms.Label tallestLabel;
+        private System.Windows.Forms.Label browneyedLabel;
+        private System.Windows.Forms.Label femaleLabel;
+        private System.Windows.Forms.Label averageLabel;
+        private System.Windows.Forms.Label maleLabelOutput;
+        private System.Windows.Forms.Label averageOutputLabel;
+        private System.Windows.Forms.Label tallestOutputLabel;
+        private System.Windows.Forms.Label brownEyedOutputLabel;
+        private System.Windows.Forms.Label femaleOutputLabel;
+        private System.Windows.Forms.Label shortestLabel;
+        private System.Windows.Forms.Label shortestOutputLabel;
     }
 }
 

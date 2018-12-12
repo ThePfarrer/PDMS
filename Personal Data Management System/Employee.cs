@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Personal_Data_Management_System
 {
     [Serializable]
-    class Employee : Person
+    public class Employee : Person
     {
         double employeeNumber;
         readonly double salary;
@@ -15,6 +15,11 @@ namespace Personal_Data_Management_System
         public double EmployeeNumber { get => employeeNumber; set => employeeNumber = value; }
 
         public double Salary => salary;
+
+        public Employee()
+        {
+
+        }
 
         public Employee(string surname, string givenName, double height, genderType gender, eyeColorType eyeColor,
             double employeeNumber, double salary) : base(surname, givenName, height, gender, eyeColor)
