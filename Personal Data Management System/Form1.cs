@@ -237,5 +237,12 @@ namespace Personal_Data_Management_System
 
             filterTextbox.Text = s;
         }
+
+        private void addPersonButton_Click(object sender, EventArgs e)
+        {
+            people.Add(new Person());
+            currentindex = people.Count - 1;
+            RefreshGuiData();
+        }
     }
 }

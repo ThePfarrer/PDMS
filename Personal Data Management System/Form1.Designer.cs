@@ -72,6 +72,7 @@
             this.femaleOutputLabel = new System.Windows.Forms.Label();
             this.shortestLabel = new System.Windows.Forms.Label();
             this.shortestOutputLabel = new System.Windows.Forms.Label();
+            this.addPersonButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // previousButton
@@ -322,7 +323,7 @@
             // 
             // sortSurnameButton
             // 
-            this.sortSurnameButton.Location = new System.Drawing.Point(500, 208);
+            this.sortSurnameButton.Location = new System.Drawing.Point(500, 249);
             this.sortSurnameButton.Name = "sortSurnameButton";
             this.sortSurnameButton.Size = new System.Drawing.Size(288, 33);
             this.sortSurnameButton.TabIndex = 38;
@@ -332,7 +333,7 @@
             // 
             // sortGivenNameButton
             // 
-            this.sortGivenNameButton.Location = new System.Drawing.Point(500, 249);
+            this.sortGivenNameButton.Location = new System.Drawing.Point(500, 290);
             this.sortGivenNameButton.Name = "sortGivenNameButton";
             this.sortGivenNameButton.Size = new System.Drawing.Size(288, 33);
             this.sortGivenNameButton.TabIndex = 39;
@@ -342,7 +343,7 @@
             // 
             // filterButton
             // 
-            this.filterButton.Location = new System.Drawing.Point(500, 297);
+            this.filterButton.Location = new System.Drawing.Point(500, 331);
             this.filterButton.Name = "filterButton";
             this.filterButton.Size = new System.Drawing.Size(141, 32);
             this.filterButton.TabIndex = 40;
@@ -352,7 +353,7 @@
             // 
             // filterTextbox
             // 
-            this.filterTextbox.Location = new System.Drawing.Point(500, 349);
+            this.filterTextbox.Location = new System.Drawing.Point(500, 379);
             this.filterTextbox.Multiline = true;
             this.filterTextbox.Name = "filterTextbox";
             this.filterTextbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -476,11 +477,22 @@
             this.shortestOutputLabel.TabIndex = 54;
             this.shortestOutputLabel.Text = "0";
             // 
+            // addPersonButton
+            // 
+            this.addPersonButton.Location = new System.Drawing.Point(500, 208);
+            this.addPersonButton.Name = "addPersonButton";
+            this.addPersonButton.Size = new System.Drawing.Size(288, 33);
+            this.addPersonButton.TabIndex = 55;
+            this.addPersonButton.Text = "Add Person";
+            this.addPersonButton.UseVisualStyleBackColor = true;
+            this.addPersonButton.Click += new System.EventHandler(this.addPersonButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 537);
+            this.ClientSize = new System.Drawing.Size(855, 552);
+            this.Controls.Add(this.addPersonButton);
             this.Controls.Add(this.shortestOutputLabel);
             this.Controls.Add(this.shortestLabel);
             this.Controls.Add(this.femaleOutputLabel);
@@ -579,6 +591,7 @@
         private System.Windows.Forms.Label femaleOutputLabel;
         private System.Windows.Forms.Label shortestLabel;
         private System.Windows.Forms.Label shortestOutputLabel;
+        private System.Windows.Forms.Button addPersonButton;
     }
 }
 
